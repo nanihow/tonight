@@ -10,7 +10,6 @@ require.config({
         bootstrap: "bootstrap/js/bootstrap",
         common: "../js/common",
         login: "../js/login",
-        tList:"../js/teacherList",
-        tAdd:"../js/teacherAdd"
+        tList:"../js/teacherList"
     }
 });
