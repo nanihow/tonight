@@ -88,9 +88,9 @@
         <td>{{$value.tc_join_date}}</td>
         <td>{{$value.tc_cellphone}}</td>
         <td data-id="{{$value.tc_id}}" data-status="{{$value.tc_status}}">
-            <a href="javascript:;" data-toggle="modal" class="btn btn-info btn-xs check">detail</a>
+            <a href="#" data-toggle="modal" class="btn btn-info btn-xs check">detail</a>
             <a href="./teacher_add?tc_id={{$value.tc_id}}" class="btn btn-info btn-xs">upload</a>
-            <a href="javascript:;" class="btn btn-warning btn-xs doa">
+            <a href="#" class="btn btn-warning btn-xs doa">
                 {{if $value.tc_status == 0}}
                 open
                 {{else}}

@@ -1,7 +1,7 @@
 /**
  * Created by rentao on 2017/9/20.
  */
-define(["jquery", "template","bootstrap"], function ($, template) {
+define(["jquery", "template", "bootstrap"], function ($, template) {
     $.ajax({
         type: "get",
         url: "/api/teacher",
@@ -38,7 +38,7 @@ define(["jquery", "template","bootstrap"], function ($, template) {
                         type: "get",
                         dataType: "json",
                         url: "/api/teacher/view",
-                        data:{tc_id:that.parent().attr("data-id")},
+                        data: {tc_id: that.parent().attr("data-id")},
                         success: function (data) {
                             $("#tV").html(template("tIa", data.result));
                             $("#teacherModal").modal();

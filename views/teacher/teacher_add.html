@@ -35,24 +35,27 @@
                 <label for="" class="col-xs-3 control-label">姓名</label>
 
                 <div class="col-xs-4">
-                    <input type="text" class="form-control input-sm" name="tc_name" value="{{tc_name}}">
+                    <input type="text" data-required data-description="tN" data-describedby="tNm" class="form-control input-sm" name="tc_name" value="{{tc_name}}">
                 </div>
+                <div class="col-xs-3" id="tNm"></div>
             </div>
             {{if !tc_id}}
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">密码</label>
 
                 <div class="col-xs-4">
-                    <input type="password" class="form-control input-sm" name="tc_pass">
+                    <input type="password" data-required data-description="tP" data-describedby="tPm" data-pattren="^\d{6}$" class="form-control input-sm" name="tc_pass">
                 </div>
+                <div class="col-xs-3" id="tPm"></div>
             </div>
             {{/if}}
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">入职时间</label>
 
                 <div class="col-xs-4">
-                    <input type="text" data-provide="datepicker" data-date-language="zh-CN" data-date-format="yyyy-mm-dd" data-date-end-date="0d" class="form-control input-sm" name="tc_join_date" value="{{tc_join_date}}">
+                    <input type="text" data-required data-description="tJD" data-describedby="tJDm" data-provide="datepicker" data-date-language="zh-CN" data-date-format="yyyy-mm-dd" data-date-end-date="0d" class="form-control input-sm" name="tc_join_date" value="{{tc_join_date}}">
                 </div>
+                <div class="col-xs-3" id="tJDm"></div>
             </div>
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">类型</label>
@@ -80,7 +83,7 @@
             </div>
             <div class="form-group">
                 <div class="col-xs-7">
-                    <a href="javascript:;" class="btn btn-success btn-sm pull-right" id="uploadF">{{finish}}</a>
+                    <input type="submit" class="btn btn-success btn-sm pull-right" id="uploadF" value="{{finish}}"/>
                 </div>
             </div>
         </form>
