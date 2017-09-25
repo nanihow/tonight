@@ -21,8 +21,6 @@ define(["jquery", "template", "cookie"], function ($, template) {
     if (!flag && location.pathname != "/main/login") {
         location.href = "/main/login";
     }
-    //$(".aside .profile .avatar img").attr("src", flag.tc_avatar);
-    //$(".aside .profile h4").html(flag.tc_name);
     var a = '<div class="avatar img-circle"><img src="{{tc_avatar}}"></div><h4>{{tc_name}}</h4>';
     $(".aside .profile").html(template.render(a, flag));
 });

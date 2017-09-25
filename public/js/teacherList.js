@@ -1,7 +1,8 @@
 /**
  * Created by rentao on 2017/9/20.
  */
-define(["jquery", "template", "bootstrap"], function ($, template) {
+define(["jquery", "template", "tools","bootstrap"], function ($, template,tools) {
+    tools.sm(location.pathname);
     $.ajax({
         type: "get",
         url: "/api/teacher",
