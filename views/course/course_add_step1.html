@@ -24,7 +24,7 @@
     <ol class="breadcrumb">
         <li><a href="javascript:;">课程管理</a></li>
         <li class="active">
-            {{if cs_edit}}
+            {{if flag}}
             课程修改
             {{else}}
             课程添加
@@ -36,7 +36,7 @@
         <div class="brief">
             <div class="thumb">
                 {{if cs_cover}}
-                <img src="{{cs_cover}}"/>
+                <img src="{{cs_cover}}" name="cs_cover"/>
                 {{else}}
                 <img src="uploads/course.png"/>
                 {{/if}}
@@ -49,19 +49,19 @@
         <!-- 步聚 -->
         <ul class="forwards list-unstyled">
             <li>
-                <a href="course_add_step1" class="active">
+                <a href="course_add_step1?cs_id={{cs_id}}" class="active">
                     <b>1</b>
                     基本信息
                 </a>
             </li>
             <li>
-                <a href="course_add_step2">
+                <a href="course_add_step2?cs_id={{cs_id}}">
                     <b>2</b>
                     课程图片
                 </a>
             </li>
             <li>
-                <a href="course_add_step3">
+                <a href="course_add_step3?cs_id={{cs_id}}">
                     <b>3</b>
                     课时管理
                 </a>
@@ -87,14 +87,14 @@
                     <label for="" class="col-xs-2 control-label">课程描述</label>
 
                     <div class="col-xs-8 ckeditor">
-                        <textarea name="" id="ed" rows="15" class="form-control input-sm">{{cs_brief}}</textarea>
+                        <textarea name="cs_brief" id="fwb" rows="15" class="form-control input-sm">{{cs_brief}}</textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-xs-2 control-label">讲师</label>
 
                     <div class="col-xs-8">
-                        <select name="" class="form-control input-sm">
+                        <select name="cs_tc_id" class="form-control input-sm">
                             <option value="">讲师</option>
                             {{if teacher}}
                             {{each teacher}}
@@ -110,7 +110,7 @@
                     <label for="" class="col-xs-2 control-label">分类</label>
 
                     <div class="col-xs-8">
-                        <select name="" id="level1" class="form-control input-sm">
+                        <select id="level1" class="form-control input-sm">
                             <option value="">方向</option>
                             {{if category}}
                             {{each category.top}}
@@ -120,7 +120,7 @@
                             {{/each}}
                             {{/if}}
                         </select>
-                        <select name="" id="level2" class="form-control input-sm">
+                        <select name="cs_cg_id" id="level2" class="form-control input-sm">
                             <option value="">课程</option>
                             {{if category}}
                             {{each category.childs}}
@@ -136,14 +136,14 @@
                     <label for="" class="col-xs-2 control-label">标签</label>
 
                     <div class="col-xs-8">
-                        <input type="text" class="form-control input-sm" value="{{cs_tags}}">
+                        <input type="text" name="cs_tags" class="form-control input-sm" value="{{cs_tags}}">
 
                         <p class="help-block">将会应用于按标签搜索课程、相关课程的提取等</p>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-10">
-                        <input type="submit" class="btn btn-success btn-sm pull-right" value="save" id="s1Done"/>
+                        <input type="submit" class="btn btn-success btn-sm pull-right" value="save" />
                     </div>
                 </div>
             </form>

@@ -10,9 +10,10 @@ define(["jquery"], function ($) {
                 var r = looking.split("&");
                 $.each(r, function (index, item) {
                     var rr = item.split("=");
-                    if (rr[0] == key)
+                    if (rr[0] == key){
                         result = rr[1];
-                    return false;
+                        return false;
+                    }
                 });
             }
             return result;
