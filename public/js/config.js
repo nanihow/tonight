@@ -16,6 +16,8 @@ require.config({
         region: "jquery-region/jquery.region",
         ck: "ckeditor/ckeditor",
         crop: "jquery-jcrop/js/Jcrop",
+        npro:"nprogress/nprogress",
+        echarts:"echarts/echarts.min",
         common: "../js/common",
         tools: "../js/tools",
         login: "../js/login",
@@ -27,7 +29,8 @@ require.config({
         cAdd: "../js/courseAdd",
         cAS1: "../js/step1",
         cAS2: "../js/step2",
-        cAS3: "../js/step3"
+        cAS3: "../js/step3",
+        mask:"../js/mask"
     },
     shim: {
         bootstrap: {
