@@ -8,7 +8,6 @@ define(["jquery","template","tools"], function ($, template, tools) {
         url:"/api/course",
         dataType:"json",
         success: function (data) {
-            console.log(data);
             $("#cI").html(template("cL",data.result));
         }
     })

@@ -9,7 +9,6 @@ define(["jquery","tools","form"], function ($, tools) {
             url:"/api/course/create",
             dataType:"json",
             success: function (data) {
-                console.log(data);
                 location.href="/course/course_add_step1?cs_id="+data.result.cs_id;
             }
         })
